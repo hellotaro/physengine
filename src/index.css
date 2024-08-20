@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.game-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.game-selectbutton {
+    @apply bg-gradient-to-r from-fuchsia-300 to-violet-300;
+
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+
+    &:hover {
+        @apply bg-gradient-to-r from-fuchsia-600 to-violet-600;
+        color: #FFF;
+    }
+    
+}
+.game-selectsection {
+    @apply bg-green-500;
+
+    line-height: 40px;
+    text-align: center;
+}
+
+
+.scroll-container {
+    
+}
+
+.subapp-selectbutton {
+    @apply bg-gradient-to-r from-rose-500 to-fuchsia-500;
+
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+
+    &:hover {
+        @apply bg-gradient-to-r from-amber-400 to-orange-500;
+    }
+}
+
+.modal {
+    @apply block bg-white;
+
+    min-height: 240px;
+    max-height: 80%;
+    overflow-y: scroll;
+    border-radius: 8px;
+
+    & .modal-header {
+        @apply block bg-indigo-500 px-5;
+    
+        line-height: 30px;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    & .modal-button {
+        @apply relative block;
+
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+.load-ping { 
+    @apply animate-spin h-10 w-10 border-4 border-blue-500 rounded-full border-t-transparent;
+
+}
+
+.image-box {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    & .button {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        display: block;
+        width: 14px;
+        line-height: 14px;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 50%;
+        background: #555;
+        color: #FFF;
+        cursor: pointer;
+    }
+}
+
+.basic-button {
+    @apply text-white font-bold py-2 px-4 rounded-full    
+}
+
+.select-form {
+    @apply py-3 px-4 pe-9 block border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600;
+}
+
+.input-form-label {
+    @apply block text-sm font-medium leading-6 text-gray-900;
+}
+.input-form {
+    @apply block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300;
+}

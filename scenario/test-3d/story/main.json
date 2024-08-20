@@ -1,0 +1,14 @@
+{
+    "dimension": "3d",
+    "objectpath": "/scenario/test-3d/object/objects.json",
+    "lightpath": "/scenario/test-3d/light/lights.json",
+    "camerapath": "/scenario/test-3d/camera/cameras.json",
+    "interact": {
+        "keyboard": [],
+        "mouse": []
+    },
+    "game": {
+        "type": "test",
+        "posType": "free"
+    }
+}

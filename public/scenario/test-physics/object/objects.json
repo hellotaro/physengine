@@ -1,0 +1,187 @@
+[
+    {
+        "name": "targetCube",
+        "type": "primitive",
+        "arg": "box",
+        "initPos": [0,0,0],
+        "initRot": [0,0,0],
+        "motion": {
+            "type": "none"
+        },
+        "rotation": {
+            "type": "none"
+        },
+        "material": {
+            "type": "lambert",
+            "settings": {
+                "color": "#E77"
+            }
+        },
+        "gameInfo": {
+            "selectable": true
+        },
+        "physics": {
+            "fixed": false,
+            "weight": 1,
+            "shape": {
+                "type": "cube",
+                "meta": {
+                    "offset": [0,0,0],
+                    "size": [1,1,1]
+                }
+            },
+            "actions": [{
+                "type": "push"
+            }]
+        }
+    },
+    {
+        "name": "targetSphere",
+        "type": "primitive",
+        "arg": "sphere",
+        "initPos": [0,0,0],
+        "initRot": [0,0,0],
+        "initScale": [1,1,1],
+        "motion": {
+            "type": "none"
+        },
+        "rotation": {
+            "type": "none"
+        },
+        "material": {
+            "type": "lambert",
+            "settings": {
+                "color": "#E77"
+            }
+        },
+        "gameInfo": {
+            "selectable": true
+        },
+        "physics": {
+            "fixed": false,
+            "weight": 1,
+            "shape": {
+                "type": "sphere",
+                "meta": {
+                    "offset": [0,0,0],
+                    "radius": 1
+                }
+            },
+            "actions": [{
+                "type": "push"
+            }]
+        }
+    },
+    {
+        "name": "targetCustom",
+        "type": "primitive",
+        "arg": "pole",
+        "initPos": [0,0,0],
+        "initRot": [0,0,0],
+        "object": {
+            "verNum": 6
+        },
+        "motion": {
+            "type": "none"
+        },
+        "rotation": {
+            "type": "none"
+        },
+        "material": {
+            "type": "lambert",
+            "settings": {
+                "color": "#E77"
+            }
+        },
+        "gameInfo": {
+            "selectable": true
+        },
+        "physics": {
+            "fixed": false,
+            "weight": 1,
+            "shape": {
+                "type": "custom",
+                "meta": {
+                    "offset": [0,0,0]
+                }
+            },
+            "actions": [{
+                "type": "push"
+            }]
+        }
+    },
+    {
+        "name": "targetCustom2",
+        "type": "primitive",
+        "arg": "pole",
+        "initPos": [0,0,0],
+        "initRot": [0,0,0],
+        "object": {
+            "verNum": 3
+        },
+        "motion": {
+            "type": "none"
+        },
+        "rotation": {
+            "type": "none"
+        },
+        "material": {
+            "type": "lambert",
+            "settings": {
+                "color": "#E77"
+            }
+        },
+        "gameInfo": {
+            "selectable": true
+        },
+        "physics": {
+            "fixed": false,
+            "weight": 1,
+            "shape": {
+                "type": "custom",
+                "meta": {
+                    "offset": [0,0,0]
+                }
+            },
+            "actions": [{
+                "type": "push"
+            }]
+        }
+    },
+    {
+        "name": "wallCube",
+        "type": "primitive",
+        "arg": "box",
+        "initPos": [0,0,0],
+        "initRot": [0,0,0],
+        "motion": {
+            "type": "none"
+        },
+        "rotation": {
+            "type": "none"
+        },
+        "material": {
+            "type": "lambert",
+            "settings": {
+                "color": "#EEE"
+            }
+        },
+        "gameInfo": {
+            "selectable": true
+        },
+        "physics": {
+            "fixed": true,
+            "weight": 1,
+            "shape": {
+                "type": "cube",
+                "meta": {
+                    "offset": [0,0,0],
+                    "size": [1,1,1]
+                }
+            },
+            "actions": [{
+                "type": "push"
+            }]
+        }
+    }
+]

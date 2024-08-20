@@ -1,0 +1,24 @@
+{
+    "dimension": "3d",
+    "objectpath": "/scenario/test-physics/object/objects.json",
+    "lightpath": "/scenario/test-physics/light/lights.json",
+    "camerapath": "/scenario/test-physics/camera/cameras.json",
+    "physics": {
+        "moveDir": "xyz",
+        "colAcType": "posRotSlip"
+    },
+    "game": {
+        "type": "test-physics",
+        "posType": "lattice",
+        "settings": {
+            "assetMapping": {
+                "board": "board",
+                "targetCube": "targetCube",
+                "targetSphere": "targetSphere",
+                "targetCustom": "targetCustom",
+                "targetCustom2": "targetCustom2",
+                "wallCube": "wallCube"
+            }
+        }
+    }
+}

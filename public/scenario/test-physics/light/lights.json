@@ -1,0 +1,32 @@
+[
+    {
+        "name": "env",
+        "type": "ambient",
+        "color": "#FFF",
+        "intensity": 0.3,
+        "shadow": "none"
+    },
+    {
+        "name": "mainspot",
+        "type": "spot",
+        "color": "#FFF",
+        "intensity": 10,
+        "pos": [0,5,0]
+    },
+    {
+        "name": "point1",
+        "type": "point",
+        "color": "#FFF",
+        "intensity": 10,
+        "distance": 100,
+        "pos": [-3,3,-3]
+    },
+    {
+        "name": "point2",
+        "type": "point",
+        "color": "#FFF",
+        "intensity": 10,
+        "distance": 100,
+        "pos": [3,3,3]
+    }
+]

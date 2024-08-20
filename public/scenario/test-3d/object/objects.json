@@ -1,0 +1,33 @@
+[
+    {
+        "name": "player1",
+        "type": "primitive",
+        "arg": "box",
+        "initPos": [0,0,0],
+        "initRot": [0,0,0],
+        "material": {
+            "type": "lambert",
+            "settings": {
+                "color": "#EE7"
+            }
+        }
+    },
+    {
+        "name": "plane1",
+        "type": "primitive",
+        "arg": "plane",
+        "initPos": [0,-1,0],
+        "initRot": [-90,0,0],
+        "object": {
+            "planeSize": [10,10],
+            "planeSplit": [10,10]
+        },
+        "material": {
+            "type": "wireframe",
+            "settings": {}
+        },
+        "light": {
+            "receive": true
+        }
+    }
+]
