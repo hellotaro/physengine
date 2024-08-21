@@ -1,6 +1,6 @@
 [
     {
-        "name": "player1",
+        "name": "box1",
         "type": "primitive",
         "arg": "box",
         "initPos": [0,0,0],

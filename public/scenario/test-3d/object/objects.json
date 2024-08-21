@@ -1,6 +1,6 @@
 [
     {
-        "name": "player1",
+        "name": "box1",
         "type": "primitive",
         "arg": "box",
         "initPos": [0,0,0],
@@ -23,8 +23,10 @@
             "planeSplit": [10,10]
         },
         "material": {
-            "type": "wireframe",
-            "settings": {}
+            "type": "lambert",
+            "settings": {
+                "color": "#AAA"
+            }
         },
         "light": {
             "receive": true

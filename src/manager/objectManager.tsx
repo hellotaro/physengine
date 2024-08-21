@@ -49,26 +49,10 @@ class ObjectManager {
         this.objects = this.objects.concat(newObjects)
         return newObjects
     }
-    async loadObjects(objDef: any, addScene: any, isAddObject = false) {
+    async loadObjects(objDef: any, addScene: any) {
         // load objects in parallel
         const objects = await Promise.all(objDef.map((def:any) => this.loadObject(def)))
         
-        // object follow
-        const getObjectByName = (name: string, objects: any) => {
-            for(let obj of objects) {
-                if(obj.name == name) return obj
-            }
-            return null
-        }
-        for(let obj1 of objects) {
-            if(obj1.info.followTo) {
-                const followObjName = obj1.info.followTo
-                const obj2 = getObjectByName(followObjName, objects)
-                if(obj2 != null) {
-                    obj2.addFollowObject(obj1)
-                }
-            }
-        }
         // add THREE object to scene
         for(let obj of objects) {
             addScene(obj.object)

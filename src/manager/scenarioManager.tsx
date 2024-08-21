@@ -113,6 +113,7 @@ class ScenarioManager {
         }
         await this.cameraManager.loadSceneCamera(cameraSet, this.addScene, camMeta)
         await this.lightManager.loadSceneLight(lightSet, this.addScene)
+
         if(isObjectCache) {
             await this.cacheRefreshObjects(objSet, isObjectHide)
         } else {
@@ -125,10 +126,10 @@ class ScenarioManager {
     }
 
     async cacheRefreshObjects(objSet: string, isObjectHide: boolean) {
-        // cache objects
+        // cache object defs
         await this.objectManager.loadSceneObject(objSet, this.addScene, isObjectHide)
         this.clearScene()
-        // reload object (from cache)
+        // reload object defs from cache
         await this.objectManager._loadSceneObject(this.objectManager.getOriginObjectDefs(), this.addScene)
     }
 

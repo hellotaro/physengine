@@ -16,7 +16,6 @@ export type GameInfo = {
 type ObjectInfo<GameInfoT = GameInfo> = {
     role: (null|string),
     player: (null|PlayerDef)
-    followTo: string
     gameInfo: GameInfoT
 }
 
@@ -35,7 +34,6 @@ class Object<GameInfoT extends GameInfo = GameInfo> {
     initPos: Vector3
     initRot: Vector3
     initScale: Vector3
-    followObjects: any
     info: ObjectInfo<GameInfoT>
     _timeframe: number
     isTimeframeEnable: boolean
@@ -56,12 +54,10 @@ class Object<GameInfoT extends GameInfo = GameInfo> {
         this.initPos = new Vector3()
         this.initRot = new Vector3()
         this.initScale = new Vector3(1,1,1)
-        this.followObjects = []
         this.info = {
             role: null,
             gameInfo: {} as GameInfoT,
             player: null,
-            followTo: "",
         }
         this._timeframe = 0
         this.isTimeframeEnable = true
@@ -86,7 +82,6 @@ class Object<GameInfoT extends GameInfo = GameInfo> {
         materialSettings.name = objName
         const objLight = def.light
         const objBone = def.bone
-        const objFollowTo = def.followTo
         const objMeta = {
             object: objDetail,
             sprite: objSprite,
@@ -162,7 +157,6 @@ class Object<GameInfoT extends GameInfo = GameInfo> {
         const materialSettings = def.material
         materialSettings.name = objName
         const objLight = def.light
-        const objFollowTo = def.followTo
         const objMeta = {
             object: objDetail,
         }
@@ -185,9 +179,6 @@ class Object<GameInfoT extends GameInfo = GameInfo> {
         }
         if(this.info.role == "player") {
             this.info.player = def.player
-        }
-        if(def.followTo) {
-            this.info.followTo = objFollowTo
         }
         if(def.gameInfo) {
             this.info.gameInfo = copyObject(def.gameInfo)
@@ -275,10 +266,6 @@ class Object<GameInfoT extends GameInfo = GameInfo> {
         this.object.scale.x = vec.x
         this.object.scale.y = vec.y
         this.object.scale.z = vec.z
-    }
-
-    addFollowObject(object: any) {
-        this.followObjects.push(object)
     }
 
     updateMaterialColor(color: string) {
@@ -377,7 +364,7 @@ class Object<GameInfoT extends GameInfo = GameInfo> {
     }
 
 
-    async genMaterial(matSettings: any) {
+    genMaterial(matSettings: any) {
         let material:any = null
         const mattype: MaterialType = matSettings.type
         const settings = matSettings.settings
@@ -412,6 +399,8 @@ class Object<GameInfoT extends GameInfo = GameInfo> {
             }
             material.needsUpdate = true
         }
+
+        return material
     }
 }
 

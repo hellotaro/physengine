@@ -6,22 +6,6 @@
         "near": 0.1,
         "far": 1000,
         "pos": [0,5,10],
-        "lookAtPos": [0,0,-1],
-        "motion": {
-            "type": "anim",
-            "rotate": {
-                "plane": "zx",
-                "angle": 1
-            }
-        },
-        "lookAtMeta": {
-            "motion": {
-                "type": "anim",
-                "rotate": {
-                    "plane": "zx",
-                    "angle": 1
-                }
-            }
-        }
+        "lookAtPos": [0,0,0]
     }
 ]
